@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect()->route('profile');
+})->middleware(['auth'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/profile', function () {
+    return view('welcome');
+})->middleware(['auth'])->name('profile');
 
 require __DIR__.'/auth.php';
