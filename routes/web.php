@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect()->route('profile');
-})->middleware(['auth'])->name('home');
+})->name('home');
 
 Route::get('/profile', function () {
     return view('welcome');

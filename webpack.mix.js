@@ -1,6 +1,14 @@
 const mix = require('laravel-mix');
 
 /*
+mix.webpackConfig({
+    stats: {
+        children: true
+    }
+});
+ */
+
+/*
  |--------------------------------------------------------------------------
  | Mix Asset Management
  |--------------------------------------------------------------------------
@@ -12,6 +20,9 @@ const mix = require('laravel-mix');
  */
 
 mix
+
+    .disableSuccessNotifications()
+
     .setPublicPath('public/assets')
     .setResourceRoot('/assets/')
 

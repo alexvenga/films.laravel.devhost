@@ -5,12 +5,16 @@ module.exports = {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
         screens: {
             'xs': '360px',
-            ...defaultTheme.screens,
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
         },
         container: {
             center: true,
@@ -36,7 +40,7 @@ module.exports = {
 
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
     },
