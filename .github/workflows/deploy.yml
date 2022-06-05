@@ -26,3 +26,4 @@ jobs:
           #key: ${{ secrets.SSHKEY }}
           password: ${{ secrets.PASSWORD }}
           script: "cd /var/www/cheese_shopa_usr/data/www/cheese.shopary.ru && ./.scripts/deploy.sh"
+          
