@@ -30,3 +30,4 @@ npm run prod
 /opt/php81/bin/php artisan up
 
 echo "Deployment finished!"
+
