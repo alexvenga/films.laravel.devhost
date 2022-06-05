@@ -25,5 +25,5 @@ jobs:
           port: ${{ secrets.PORT }}
           #key: ${{ secrets.SSHKEY }}
           password: ${{ secrets.PASSWORD }}
-          script: "/var/www/cheese_shopa_usr/data/www/cheese.shopary.ru/.scripts/deploy.sh"
+          script: "cd /var/www/cheese_shopa_usr/data/www/cheese.shopary.ru && /var/www/cheese_shopa_usr/data/www/cheese.shopary.ru/.scripts/deploy.sh"
 
