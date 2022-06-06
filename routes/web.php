@@ -17,8 +17,7 @@ Route::get('/', function () {
     return redirect()->route('profile');
 })->name('home');
 
-Route::get('/profile', function () {
-    return view('welcome');
-})->middleware(['auth'])->name('profile');
+Route::get('/profile', \App\Http\Controllers\ProfileController::class)
+    ->middleware(['auth'])->name('profile');
 
 require __DIR__.'/auth.php';

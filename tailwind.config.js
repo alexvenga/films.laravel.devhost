@@ -1,6 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+
+    darkMode: 'class',
+
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -14,7 +17,6 @@ module.exports = {
             sm: '640px',
             md: '768px',
             lg: '1024px',
-            xl: '1280px',
         },
         container: {
             center: true,
@@ -30,7 +32,6 @@ module.exports = {
                 sm: '640px',
                 md: '768px',
                 lg: '1024px',
-                xl: '1280px',
                 //'2xl': '1536px',
             },
         },
