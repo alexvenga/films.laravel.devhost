@@ -19,6 +19,8 @@ class ProfilePhotoComponent extends Component
     {
         if (Storage::disk('public')->exists('photos/avatar.png')) {
             $this->avatarPath = Storage::disk('public')->url('photos/avatar.png');
+        } else {
+            $this->avatarPath = '/assets/img/no-photo.png';
         }
     }
 

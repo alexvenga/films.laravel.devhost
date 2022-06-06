@@ -103,10 +103,106 @@
             </ul>
         </div>
 
-        <div class="w-56">
+        <div class="w-56 space-y-4 text-sm">
+
             <div class="bg-white shadow border p-4">
-            <livewire:profile-photo-component/>
+                <livewire:profile-photo-component/>
             </div>
+
+            <div class="bg-white shadow border p-4">
+                <a href="#" class="flex items-center text-blue-900">
+                    <x-gmdi-link-o class="w-5 h-5 mr-2"/>
+                    Ссылка на профиль
+                </a>
+            </div>
+
+            <div class="bg-white shadow border p-4">
+                <h3>Подарки</h3>
+                <div class="flex items-center justify-around flex-wrap mt-2">
+                    <img alt="" src="/assets/img/podarki/1.png" class="h-14 w-14">
+                    <img alt="" src="/assets/img/podarki/2.png" class="h-14 w-14">
+                    <img alt="" src="/assets/img/podarki/3.png" class="h-14 w-14">
+                    <img alt="" src="/assets/img/podarki/4.png" class="h-14 w-14">
+                    <img alt="" src="/assets/img/podarki/5.png" class="h-14 w-14">
+                    <img alt="" src="/assets/img/podarki/6.png" class="h-14 w-14">
+                </div>
+            </div>
+
+            <div class="bg-white shadow border p-4">
+                <h3>Друзья</h3>
+                <div class="flex items-center justify-around flex-wrap">
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/1.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Наталья
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/2.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Иван
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/3.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Светлана
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/4.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Мария
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/5.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Саша
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/6.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Ксения
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="bg-white shadow border p-4">
+                <h3>Друзья онлайн</h3>
+                <div class="flex items-center justify-around flex-wrap">
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/7.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Ангелина
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/8.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Мира
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/9.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Юлия
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/10.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Дмитрий
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/11.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Михаил
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/users/12.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Мила
+                    </div>
+
+                </div>
+            </div>
+
         </div>
         <div class="grow">
             Feed
