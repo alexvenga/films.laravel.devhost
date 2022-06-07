@@ -107,12 +107,79 @@
                         Изменить страницу
                     </a>
                 </li>
-                <li>
+                <li x-data="{ showModal: false }">
                     <a href="{{ route('profile') }}"
-                       class="flex items-center">
+                       class="flex items-center"
+                    @click.prevent="showModal = true">
                         <x-gmdi-delete-o class="w-5 h-5 mr-2 text-blue-900"/>
                         Удалить страницу
                     </a>
+
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
+
+                             @close.stop="showModal = false"
+                             @keydown.escape.stop="showModal = false"
+                             @click.stop="showModal = false"
+                             x-show="showModal" x-cloak
+                        >
+                            <div class="relative p-4 w-full max-w-2xl"
+                                 x-show="showModal" x-cloak
+                                 x-transition:enter="ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                 x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                 x-transition:leave="ease-in duration-200"
+                                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                                <!-- Modal content -->
+                                <div class="relative bg-white rounded shadow dark:bg-gray-700"
+                                     @click.stop="">
+                                    <!-- Modal header -->
+                                    <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                            Удалить аккаунт
+                                        </h3>
+                                        <button type="button"
+                                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                                @click.stop="showModal = false">
+                                            <x-gmdi-close class="w-5 h-5"/>
+                                        </button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="p-6 space-y-4">
+
+                                        <p>
+                                            Нам очень жаль что вы решили удалить ваш аккаунт из социальной сети ЧиирсБук!
+                                        </p>
+
+                                        <p>
+                                            для подтверждения удаления аккаунта введите код, отправленный вам в виде СМС
+                                        </p>
+
+                                        <div>
+                                            <label for="delete.code" class="block mb-1 font-medium text-gray-900 dark:text-gray-300">
+                                                Код из СМС
+                                            </label>
+                                            <input type="text" id="delete.code"
+                                                   placeholder="***"
+                                                   class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                                        <button type="submit"
+                                                class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
                 </li>
             </ul>
         </div>
