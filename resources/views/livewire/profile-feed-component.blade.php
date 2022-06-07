@@ -78,6 +78,7 @@
                         if (count >= {{ $postItem->likes }}) {
                             clearInterval(interval);
                         }
+                        /*
                         LikeeBox.animate([
                             // keyframes
                             {transform: 'translateY(0px)'},
@@ -86,13 +87,14 @@
                             // timing options
                             duration: 200
                         });
+                        */
                         LikeeHart.animate([
                             // keyframes
-                            {transform: 'translateY(0px)'},
-                            {transform: 'translateY(-6px)'}
+                            {transform: 'scale3d(1, 1, 1)'},
+                            {transform: 'scale3d(1.3, 1.3, 1.3)'}
                         ], {
                             // timing options
-                            duration: 200
+                            duration: 300
                         });
                         LikeeBox.innerText = count;
                     }, 300);
