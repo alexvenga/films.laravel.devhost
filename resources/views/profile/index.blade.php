@@ -275,23 +275,10 @@
         </div>
         <div class="grow">
             <livewire:profile-user-info-component/>
+
             <div class="mt-4">
 
-                <div class="bg-white shadow border p-4">
-                    <img src="/assets/img/users/10.jpeg" alt="" class="w-full h-auto">
-                </div>
-
-                <div class="bg-white shadow border p-4">
-                    Текстовая тестовая запись
-                </div>
-
-                <div class="bg-white shadow border p-4">
-                    Текстовая тестовая запись
-                </div>
-
-                <div class="bg-white shadow border p-4">
-                    Текстовая тестовая запись
-                </div>
+                <livewire:profile-feed-component/>
 
             </div>
         </div>
