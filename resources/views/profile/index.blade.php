@@ -153,20 +153,6 @@
                                             Нам очень жаль что вы решили удалить ваш аккаунт из социальной сети ЧиирсБук!
                                         </p>
 
-                                        <p>
-                                            для подтверждения удаления аккаунта введите код, отправленный вам в виде СМС
-                                        </p>
-
-                                        <div>
-                                            <label for="delete.code" class="block mb-1 font-medium text-gray-900 dark:text-gray-300">
-                                                Код из СМС
-                                            </label>
-                                            <input type="text" id="delete.code"
-                                                   placeholder="***"
-                                                   class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-
-                                        </div>
-
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
