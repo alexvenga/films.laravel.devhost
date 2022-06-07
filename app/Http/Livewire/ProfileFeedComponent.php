@@ -42,6 +42,15 @@ class ProfileFeedComponent extends Component
         $post->save();
     }
 
+    public function like(Post $post) {
+        $post->is_liked = !$post->is_liked;
+        $post->save();
+    }
+
+    public function delete(Post $post) {
+        $post->delete();
+    }
+
     public function save()
     {
 
