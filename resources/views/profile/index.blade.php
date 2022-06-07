@@ -1,8 +1,8 @@
 <x-app-layout>
     <div class="container flex mt-3 space-x-4">
 
-        <div class="w-40">
-            <ul class="mt-4 space-y-3 relative">
+        <div class="w-44">
+            <ul class="mt-4 space-y-4 relative leading-none">
                 <li>
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
@@ -14,14 +14,14 @@
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
                         <x-gmdi-newspaper-o class="w-5 h-5 mr-2 text-blue-900"/>
-                        Новости
+                        Новости друзей
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
                         <x-gmdi-message-o class="w-5 h-5 mr-2 text-blue-900"/>
-                        Сообщения
+                        Общение
                         <span class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">12</span>
                     </a>
                 </li>
@@ -83,7 +83,7 @@
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
                         <x-gmdi-notes-o class="w-5 h-5 mr-2 text-blue-900"/>
-                        Закладки
+                        Загрузки
                     </a>
                 </li>
                 <li>
@@ -96,8 +96,22 @@
                 <li>
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
-                        <x-gmdi-apps-o class="w-5 h-5 mr-2 text-blue-900"/>
-                        Управление
+                        <x-gmdi-add class="w-5 h-5 mr-2 text-blue-900"/>
+                        Объявления
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('profile') }}"
+                       class="flex items-center">
+                        <x-gmdi-edit-o class="w-5 h-5 mr-2 text-blue-900"/>
+                        Изменить страницу
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('profile') }}"
+                       class="flex items-center">
+                        <x-gmdi-delete-o class="w-5 h-5 mr-2 text-blue-900"/>
+                        Удалить страницу
                     </a>
                 </li>
             </ul>
@@ -114,18 +128,6 @@
                     <x-gmdi-link-o class="w-5 h-5 mr-2"/>
                     Ссылка на профиль
                 </a>
-            </div>
-
-            <div class="bg-white shadow border p-4">
-                <h3>Подарки</h3>
-                <div class="flex items-center justify-around flex-wrap mt-2">
-                    <img alt="" src="/assets/img/podarki/1.png" class="h-14 w-14">
-                    <img alt="" src="/assets/img/podarki/2.png" class="h-14 w-14">
-                    <img alt="" src="/assets/img/podarki/3.png" class="h-14 w-14">
-                    <img alt="" src="/assets/img/podarki/4.png" class="h-14 w-14">
-                    <img alt="" src="/assets/img/podarki/5.png" class="h-14 w-14">
-                    <img alt="" src="/assets/img/podarki/6.png" class="h-14 w-14">
-                </div>
             </div>
 
             <div class="bg-white shadow border p-4">
@@ -205,7 +207,26 @@
 
         </div>
         <div class="grow">
-            Feed
+            <livewire:profile-user-info-component/>
+            <div class="mt-4">
+
+                <div class="bg-white shadow border p-4">
+                    <img src="/assets/img/users/10.jpeg" alt="" class="w-full h-auto">
+                </div>
+
+                <div class="bg-white shadow border p-4">
+                    Текстовая тестовая запись
+                </div>
+
+                <div class="bg-white shadow border p-4">
+                    Текстовая тестовая запись
+                </div>
+
+                <div class="bg-white shadow border p-4">
+                    Текстовая тестовая запись
+                </div>
+
+            </div>
         </div>
     </div>
 </x-app-layout>
