@@ -25,6 +25,7 @@
     @livewireScripts
     <script src="{{ mix('js/app.js', 'assets') }}" defer></script>
 
+    {{--
     <script>
         if (localStorage.siteTheme === 'dark' || (!('siteTheme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             localStorage.siteTheme = 'dark';
@@ -34,6 +35,7 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+    --}}
 
 </head>
 <body class="font-sans antialiased">
@@ -100,6 +102,7 @@
 
     @endauth
 
+    {{--
     <div x-data="{
                 dark: localStorage.siteTheme === 'dark',
                 changeTheme() {
@@ -125,6 +128,7 @@
             </template>
         </button>
     </div>
+    --}}
 </div>
 </body>
 </html>
