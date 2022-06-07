@@ -13,10 +13,11 @@ class ProfileFeedComponent extends Component
     public bool $showEditModal = false;
 
     public $rules = [
-        'post.text'       => 'nullable|string',
+        'post.text' => 'nullable|string',
     ];
 
-    public function mount() {
+    public function mount()
+    {
         $this->post = Post::make();
     }
 
@@ -27,7 +28,18 @@ class ProfileFeedComponent extends Component
 
     public function create()
     {
+        $this->post = Post::make();
         $this->showEditModal = true;
+    }
+
+    public function resetViews(Post $post) {
+        $post->views = 0;
+        $post->save();
+    }
+
+    public function resetLikes(Post $post) {
+        $post->likes = 0;
+        $post->save();
     }
 
     public function save()
@@ -35,13 +47,16 @@ class ProfileFeedComponent extends Component
 
         $this->validate();
         $this->post->user_id = auth()->user()->id;
+        $this->post->views = mt_rand(500, 1000);
+        $this->post->likes = $this->post->views + mt_rand(100, 200);
         $this->post->save();
+        $this->post = Post::make();
         $this->showEditModal = false;
     }
 
     public function render()
     {
-        $posts = auth()->user()->posts()->latest()->get();
+        $posts = auth()->user()->posts()->latest()->get()->load('user');
 
         return view('livewire.profile-feed-component', compact('posts'));
     }

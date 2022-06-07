@@ -13,10 +13,31 @@
 
     @foreach($posts as $post)
         <div class="bg-white shadow border p-4">
-
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                    <div class="shadow w-8 h-8 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                         style="background-image: url({{ $post->user->getAvatarPath() }});"></div>
+                    <div>{{ $post->user->name }}</div>
+                </div>
+                <div class="text-xs text-gray-700 cursor-pointer">Удалить</div>
+            </div>
             @if(!empty($post->text))
-                <div>{{ $post->text }}</div>
+                <div class="mt-4">{{ $post->text }}</div>
             @endif
+            <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+                <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
+                    <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"/>
+                    @if($post->likes)
+                        <div wire:click="resetLikes({{ $post->id }})">{{ $post->likes }}</div>
+                    @endif
+                </div>
+                <div class="flex items-center space-x-1 font-bold text-gray-300 text-sx">
+                    <x-gmdi-visibility-o class="h-4 w-4"/>
+                    @if($post->views)
+                        <div wire:click="resetViews({{ $post->id }})">{{ $post->views }}</div>
+                    @endif
+                </div>
+            </div>
         </div>
     @endforeach
 
