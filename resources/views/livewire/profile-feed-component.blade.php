@@ -35,15 +35,29 @@
             @endif
             <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
                 <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
-                    @if($postItem->is_liked)
-                        <x-gmdi-favorite class="h-5 w-5 cursor-pointer text-red-700"
-                                         wire:click="like({{ $postItem->id }})"/>
+                    @if($postItem->likes && $loop->first && ($postItem->created_at > now()->subMinute()))
+                        @if($postItem->is_liked)
+                            <x-gmdi-favorite class="h-5 w-5 cursor-pointer text-red-700"
+                                             wire:click="like({{ $postItem->id }})" id="id-likes-hart"/>
+                        @else
+                            <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"
+                                             wire:click="like({{ $postItem->id }})" id="id-likes-hart"/>
+                        @endif
                     @else
-                        <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"
-                                         wire:click="like({{ $postItem->id }})"/>
+                        @if($postItem->is_liked)
+                            <x-gmdi-favorite class="h-5 w-5 cursor-pointer text-red-700"
+                                             wire:click="like({{ $postItem->id }})"/>
+                        @else
+                            <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"
+                                             wire:click="like({{ $postItem->id }})"/>
+                        @endif
                     @endif
                     @if($postItem->likes)
-                        <div wire:click="resetLikes({{ $postItem->id }})">{{ $postItem->likes }}</div>
+                        <div wire:click="resetLikes({{ $postItem->id }})"
+                             @if($postItem->likes && $loop->first && ($postItem->created_at > now()->subMinute()))
+                                 id="id-likes-animate"
+                            @endif
+                        >{{ $postItem->likes }}</div>
                     @endif
                 </div>
                 <div class="flex items-center space-x-1 font-bold text-gray-300 text-sx">
@@ -53,6 +67,38 @@
                     @endif
                 </div>
             </div>
+            @if($postItem->likes && $loop->first && ($postItem->created_at > now()->subMinute()))
+                <script>
+                    let count = 0;
+                    let interval;
+                    let LikeeBox = document.getElementById("id-likes-animate");
+                    let LikeeHart = document.getElementById("id-likes-hart");
+                    interval = setInterval(function () {
+                        count += Math.round(Math.random() * 10);
+                        if (count >= {{ $postItem->likes }}) {
+                            clearInterval(interval);
+                        }
+                        LikeeBox.animate([
+                            // keyframes
+                            {transform: 'translateY(0px)'},
+                            {transform: 'translateY(-6px)'}
+                        ], {
+                            // timing options
+                            duration: 200
+                        });
+                        LikeeHart.animate([
+                            // keyframes
+                            {transform: 'translateY(0px)'},
+                            {transform: 'translateY(-6px)'}
+                        ], {
+                            // timing options
+                            duration: 200
+                        });
+                        LikeeBox.innerText = count;
+                    }, 300);
+
+                </script>
+            @endif
         </div>
     @endforeach
 
