@@ -11,6 +11,15 @@
         </div>
     </div>
 
+    @foreach($posts as $post)
+        <div class="bg-white shadow border p-4">
+
+            @if(!empty($post->text))
+                <div>{{ $post->text }}</div>
+            @endif
+        </div>
+    @endforeach
+
     <form wire:submit.prevent="save">
         <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
              x-data="{ showModal: @entangle('showEditModal') }"

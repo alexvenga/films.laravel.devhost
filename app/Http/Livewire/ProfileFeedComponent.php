@@ -41,6 +41,8 @@ class ProfileFeedComponent extends Component
 
     public function render()
     {
-        return view('livewire.profile-feed-component');
+        $posts = auth()->user()->posts()->latest()->get();
+
+        return view('livewire.profile-feed-component', compact('posts'));
     }
 }

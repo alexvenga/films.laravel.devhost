@@ -183,6 +183,7 @@
                 </a>
             </div>
 
+            {{--
             <div class="bg-white shadow border p-4">
                 <h3>Друзья</h3>
                 <div class="flex items-center justify-around flex-wrap">
@@ -220,7 +221,6 @@
                 </div>
             </div>
 
-
             <div class="bg-white shadow border p-4">
                 <h3>Друзья онлайн</h3>
                 <div class="flex items-center justify-around flex-wrap">
@@ -257,6 +257,7 @@
 
                 </div>
             </div>
+            --}}
 
         </div>
         <div class="grow">
