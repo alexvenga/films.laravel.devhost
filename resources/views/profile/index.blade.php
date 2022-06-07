@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="container flex mt-3 space-x-4">
 
-        <div class="w-44">
+        <div class="w-44 shrink-0">
             <ul class="mt-4 space-y-4 relative leading-none">
                 <li>
                     <a href="{{ route('profile') }}"
@@ -170,7 +170,7 @@
             </ul>
         </div>
 
-        <div class="w-56 space-y-4 text-sm">
+        <div class="w-56 shrink-0 space-y-4 text-sm">
 
             <div class="bg-white shadow border p-4">
                 <livewire:profile-photo-component/>

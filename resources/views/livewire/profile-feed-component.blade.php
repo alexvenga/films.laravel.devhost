@@ -6,9 +6,10 @@
                  style="background-image: url({{ auth()->user()->getAvatarPath() }});"></div>
             <div>Что происходит?</div>
         </div>
-        <div class="cursor-pointer">
+        <label class="cursor-pointer">
             <x-gmdi-photo-o class="w-8 h-8 text-blue-800"/>
-        </div>
+            <input type="file" wire:model="photo" id="profile-photo" class="opacity-0 absolute -z-50">
+        </label>
     </div>
 
     @foreach($posts as $postItem)
@@ -20,10 +21,17 @@
                     <div>{{ $postItem->user->name }}</div>
                 </div>
                 <div class="text-xs text-gray-700 cursor-pointer"
-                     wire:click="delete({{ $postItem->id }})">Удалить</div>
+                     wire:click="delete({{ $postItem->id }})">Удалить
+                </div>
             </div>
             @if(!empty($postItem->text))
                 <div class="mt-4">{{ $postItem->text }}</div>
+            @endif
+            @if(!empty($postItem->photo))
+                <div class="mt-4">
+                    <img src="{{ $postItem->photo }}" alt=""
+                         class="w-full h-auto shadow border">
+                </div>
             @endif
             <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
                 <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
@@ -81,6 +89,13 @@
                     <!-- Modal body -->
                     <div class="p-6 space-y-4">
 
+                        @if(!empty($photo))
+                            <div>
+                                <img src="{{ $photo->temporaryUrl() }}" alt=""
+                                     class="w-full h-auto shadow border">
+                            </div>
+                        @endif
+
                         <div>
                             {{--
                             <label for="post.text" class="block mb-1 font-medium text-gray-900 dark:text-gray-300">
@@ -103,8 +118,8 @@
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
                         <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Сохранить
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Опубликовать
                         </button>
                     </div>
                 </div>
