@@ -13,16 +13,6 @@ class ProfilePhotoComponent extends Component
 
     public $photo;
 
-    public string $avatarPath;
-
-    public function mount()
-    {
-        if (Storage::disk('public')->exists('photos/avatar.png')) {
-            $this->avatarPath = Storage::disk('public')->url('photos/avatar.png');
-        } else {
-            $this->avatarPath = '/assets/img/no-photo.png';
-        }
-    }
 
     public function updatedPhoto()
     {
@@ -31,9 +21,11 @@ class ProfilePhotoComponent extends Component
             'photo' => 'image', // 1MB Max
         ]);
 
-        $this->photo->storePubliclyAs('photos', 'avatar.png', 'public');
+        $this->photo->storePubliclyAs('avatars', auth()->user()->id . '.png', 'public');
 
-        $this->avatarPath = Storage::disk('public')->url('photos/avatar.png');
+        auth()->user()->avatar = Storage::disk('public')->url('avatars/' . auth()->user()->id . '.png');
+        auth()->user()->save();
+        auth()->user()->refresh();
     }
 
     public function render()
