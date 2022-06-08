@@ -34,9 +34,39 @@
 
     </div>
 
-    <div class="fixed inset-0 z-40" x-data="{ showAds:false }" @click="showAds = true">
-        <div class="fixed inset-0 z-40 bg-white flex items-center justify-center font-bold"
-        x-cloak x-show="showAds">РЕКЛАМА</div>
+    <div class="fixed inset-0 z-40" x-data="{
+        countdownSeconds: 7,
+        showAds:false,
+        clickWindow: function() {
+            this.showAds = true;
+            let countdownInterval;
+            countdownInterval = setInterval(() => {
+              this.countdownSeconds--;
+              if (this.countdownSeconds<=0) {
+                clearInterval(countdownInterval);
+              };
+            }, 1000);
+        }
+        }" @click="clickWindow">
+        <div class="fixed inset-0 z-40 bg-white flex flex-col justify-between"
+             x-cloak x-show="showAds">
+
+            <div>
+                <div class="h-8 bg-gray-200 relative text-right flex items-center justify-end">
+                    <div class="px-2" x-show="countdownSeconds>=1">
+                        До закрытия <span x-text="countdownSeconds"></span> сек.
+                    </div>
+                    <div class="px-2 font-bold text-lg" x-show="countdownSeconds<=0" x-cloak @click="showAds = false">
+                        Закрыть
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center">Изображение</div>
+
+            <div></div>
+
+        </div>
     </div>
 
 </x-app-layout>
