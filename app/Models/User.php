@@ -56,7 +56,7 @@ class User extends Authenticatable
     public function getAvatarPath(): string
     {
         if (!empty($this->avatar)) {
-            return $this->avatar . '?time=' . time();
+            return $this->avatar . '?time=' . str($this->updated_at)->slug()->toString();
         }
 
         return '/assets/img/no-photo.png';

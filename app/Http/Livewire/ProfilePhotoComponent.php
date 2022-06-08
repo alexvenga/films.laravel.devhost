@@ -25,6 +25,7 @@ class ProfilePhotoComponent extends Component
 
         auth()->user()->avatar = Storage::disk('public')->url('avatars/' . auth()->user()->id . '.png');
         auth()->user()->save();
+        auth()->user()->touch();
         auth()->user()->refresh();
     }
 
