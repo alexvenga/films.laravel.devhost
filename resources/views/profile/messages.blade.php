@@ -23,7 +23,7 @@
                         <x-gmdi-message-o class="w-5 h-5 mr-2 text-blue-900"/>
                         Общение
                         <span
-                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
+                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-blue-500 rounded-full leading-none font-bold p-1">
                             1</span>
                     </a>
                 </li>
@@ -33,7 +33,8 @@
                         <x-gmdi-phone-o class="w-5 h-5 mr-2 text-blue-900"/>
                         Звонки
                         <span
-                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">1</span>
+                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
+                            12</span>
                     </a>
                 </li>
                 <li>
@@ -42,7 +43,8 @@
                         <x-gmdi-people class="w-5 h-5 mr-2 text-blue-900"/>
                         Друзья
                         <span
-                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">3</span>
+                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
+                            23</span>
                     </a>
                 </li>
                 {{--
@@ -58,6 +60,9 @@
                        class="flex items-center">
                         <x-gmdi-photo-o class="w-5 h-5 mr-2 text-blue-900"/>
                         Фотографии
+                        <span
+                            class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
+                            48</span>
                     </a>
                 </li>
                 <li>
@@ -286,10 +291,10 @@
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Петров Алексей</span>
+                        <span class="text-blue-800">Ольга Перевалова</span>
                     </div>
                     <div>
-                        Кратки текст сообщения который виден тут...
+                        я пришлю тебе конспект
                     </div>
                 </div>
             </div>
@@ -300,10 +305,10 @@
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Петров Алексей</span>
+                        <span class="text-blue-800">Георгий Пащенко</span>
                     </div>
                     <div>
-                        Кратки текст сообщения который виден тут...
+                        хорошо
                     </div>
                 </div>
             </div>
@@ -314,10 +319,10 @@
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Петров Алексей</span>
+                        <span class="text-blue-800">Ульяна Бондарь</span>
                     </div>
                     <div>
-                        Кратки текст сообщения который виден тут...
+                        я опоздаю на 15 минут
                     </div>
                 </div>
             </div>
