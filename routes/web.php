@@ -17,8 +17,11 @@ Route::get('/', function () {
     return redirect()->route('profile');
 })->name('home');
 
-Route::get('/profile', \App\Http\Controllers\ProfileController::class)
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])
     ->middleware(['auth'])->name('profile');
+
+Route::delete('/profile/{user}', [\App\Http\Controllers\ProfileController::class, 'delete'])
+    ->middleware(['auth'])->name('profile.delete');
 
 Route::get('/search', [\App\Http\Controllers\SearchController::class, 'search'])
     ->name('search');
