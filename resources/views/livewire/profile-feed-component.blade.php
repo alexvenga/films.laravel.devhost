@@ -74,7 +74,7 @@
                     let LikeeBox = document.getElementById("id-likes-animate");
                     let LikeeHart = document.getElementById("id-likes-hart");
                     interval = setInterval(function () {
-                        count += Math.round(Math.random() * 10);
+                        count += Math.round(Math.random() * 5);
                         if (count >= {{ $postItem->likes }}) {
                             clearInterval(interval);
                         }
@@ -97,7 +97,7 @@
                             duration: 300
                         });
                         LikeeBox.innerText = count;
-                    }, 500);
+                    }, 750);
 
                 </script>
             @endif
