@@ -41,13 +41,14 @@
                         <span class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">3</span>
                     </a>
                 </li>
+{{--
                 <li>
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
                         <x-gmdi-people class="w-5 h-5 mr-2 text-blue-900"/>
                         Сообщества
                     </a>
-                </li>
+                </li>--}}
                 <li>
                     <a href="{{ route('profile') }}"
                        class="flex items-center">
