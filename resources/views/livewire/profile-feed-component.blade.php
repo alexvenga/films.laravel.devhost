@@ -97,7 +97,7 @@
                             duration: 300
                         });
                         LikeeBox.innerText = count;
-                    }, 300);
+                    }, 500);
 
                 </script>
             @endif
