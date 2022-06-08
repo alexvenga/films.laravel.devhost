@@ -24,28 +24,33 @@
     </div>
 
 
-    <div class="container space-y-4 mt-4">
-        @foreach($results as $result)
-            <div class="border shadow p-4 bg-white relative">
-                <div class="overflow-hidden w-full">
-                    <a href="{{ $result->real_link }}" class="text-lg font-bold text-sky-900 block">
-                        {{ $result->header }}
-                    </a>
-                    <a href="{{ $result->real_link }}" class="text-sm text-sky-700 block mt-0.5 w-full truncate leading-none">
-                        {{ $result->link }}
-                    </a>
-                    <div class=" mt-1 text-gray-700">
-                        {{ $result->text }}
+    <div class="container mt-4 flex">
+        <div class="space-y-4 grow">
+            @foreach($results as $result)
+                <div class="border shadow p-4 bg-white relative">
+                    <div class="overflow-hidden w-full">
+                        <a href="{{ $result->real_link }}" class="text-lg font-bold text-sky-900 block">
+                            {{ $result->header }}
+                        </a>
+                        <a href="{{ $result->real_link }}" class="text-sm text-sky-700 block mt-0.5 w-full truncate leading-none">
+                            {{ $result->link }}
+                        </a>
+                        <div class=" mt-1 text-gray-700">
+                            {{ $result->text }}
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0">
+                        <a href="{{ route('search.result.delete', $result) }}"
+                           class="block bg-gray-50 p-2 opacity-0 hover:opacity-100">
+                            <x-gmdi-close-o class="h-5 w-5"/>
+                        </a>
                     </div>
                 </div>
-                <div class="absolute bottom-0 right-0">
-                    <a href="{{ route('search.result.delete', $result) }}"
-                       class="block bg-gray-50 p-2 opacity-0 hover:opacity-100">
-                        <x-gmdi-close-o class="h-5 w-5"/>
-                    </a>
-                </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
+        <div class="w-56 shrink-0">
+
+        </div>
     </div>
 
 
