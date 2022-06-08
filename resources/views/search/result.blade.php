@@ -23,33 +23,89 @@
         456,345 результатов поиска по запросу "<b>{{ request('query') }}</b>":
     </div>
 
-    <div class="fixed bottom-0 w-full" x-data="{ opened: false }">
+
+    <div class="container space-y-4 mt-4">
+        @foreach($results as $result)
+            <div class="border shadow p-4 bg-white relative">
+                <div class="overflow-hidden w-full">
+                    <a href="{{ $result->real_link }}" class="text-lg font-bold text-sky-900 block">
+                        {{ $result->header }}
+                    </a>
+                    <a href="{{ $result->real_link }}" class="text-sm text-sky-700 block mt-0.5 w-full truncate leading-none">
+                        {{ $result->link }}
+                    </a>
+                    <div class=" mt-1 text-gray-700">
+                        {{ $result->text }}
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0">
+                    <a href="{{ route('search.result.delete', $result) }}"
+                       class="block bg-gray-50 p-2 opacity-0 hover:opacity-100">
+                        <x-gmdi-close-o class="h-5 w-5"/>
+                    </a>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+
+    <div class="fixed bottom-0 w-full" x-data="{ opened: {{ $errors->count() > 0 ? 'true' : 'false' }} }">
         <div class="block text-right">
             <button class="text-gray-300" @click="opened = true">
                 Добавить
             </button>
         </div>
-        <form class="container py-2 grid gap-4" x-cloak x-show="opened">
+        <form class="container py-2 grid gap-4" x-cloak x-show="opened"
+              method="POST" action="{{ route('search.result.add') }}">
+            @csrf
 
-            <label>
-                Заголовок результата
-                <input class="form-input w-full" required>
-            </label>
+            <div>
+                <label>
+                    Заголовок результата
+                    <input class="form-input w-full" name="header" value="{{ old('header') }}">
+                </label>
+                @if($errors->has('header'))
+                    <div class="text-red-800">
+                        {{ $errors->first('header') }}
+                    </div>
+                @endif
+            </div>
 
-            <label>
-                Отображаемая ссылка
-                <input class="form-input w-full required">
-            </label>
+            <div>
+                <label>
+                    Отображаемая ссылка
+                    <input class="form-input w-full" name="link" value="{{ old('link') }}">
+                </label>
+                @if($errors->has('link'))
+                    <div class="text-red-800">
+                        {{ $errors->first('link') }}
+                    </div>
+                @endif
+            </div>
 
-            <label>
-                Реальная ссылка
-                <input class="form-input w-full required">
-            </label>
+            <div>
+                <label>
+                    Реальная ссылка
+                    <input class="form-input w-full" name="real_link" value="{{ old('real_link') }}">
+                </label>
+                @if($errors->has('real_link'))
+                    <div class="text-red-800">
+                        {{ $errors->first('real_link') }}
+                    </div>
+                @endif
+            </div>
 
-            <label>
-                Текстовое описание
-                <input class="form-input w-full required">
-            </label>
+            <div>
+                <label>
+                    Текстовое описание
+                    <textarea class="form-textarea w-full" name="text">{{ old('real_link') }}</textarea>
+                </label>
+                @if($errors->has('real_link'))
+                    <div class="text-red-800">
+                        {{ $errors->first('real_link') }}
+                    </div>
+                @endif
+            </div>
 
             <div class="flex justify-between mb-4">
                 <button type="submit" class="p-4 bg-blue-700 text-white">Добавить</button>

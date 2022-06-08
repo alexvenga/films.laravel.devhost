@@ -26,4 +26,10 @@ Route::get('/search', [\App\Http\Controllers\SearchController::class, 'search'])
 Route::get('/search/result', [\App\Http\Controllers\SearchController::class, 'result'])
     ->name('search.result');
 
+Route::post('/search/result/add', [\App\Http\Controllers\SearchController::class, 'add'])
+    ->name('search.result.add');
+
+Route::get('/search/result/delete/{search}', [\App\Http\Controllers\SearchController::class, 'delete'])
+    ->name('search.result.delete');
+
 require __DIR__ . '/auth.php';
