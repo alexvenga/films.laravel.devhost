@@ -24,7 +24,7 @@
                         Общение
                         <span
                             class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
-                            12</span>
+                            1</span>
                     </a>
                 </li>
                 <li>

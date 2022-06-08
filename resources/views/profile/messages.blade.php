@@ -24,7 +24,7 @@
                         Общение
                         <span
                             class="absolute right-0 flex items-center justify-center w-5 h-5 ml-2 text-xs text-white bg-gray-500 rounded-full leading-none font-bold p-1">
-                            12</span>
+                            1</span>
                     </a>
                 </li>
                 <li>
@@ -203,108 +203,122 @@
                 }
 
                 @keyframes fadeIn {
-                    0% {opacity:1;}
-                    50% {opacity:0.7;}
-                    100% {opacity:1;}
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.7;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
 
                 @-moz-keyframes fadeIn {
-                    0% {opacity:1;}
-                    50% {opacity:0.7;}
-                    100% {opacity:1;}
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.7;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
 
                 @-webkit-keyframes fadeIn {
-                    0% {opacity:1;}
-                    50% {opacity:0.7;}
-                    100% {opacity:1;}
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.7;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
 
                 @-o-keyframes fadeIn {
-                    0% {opacity:1;}
-                    50% {opacity:0.7;}
-                    100% {opacity:1;}
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.7;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
 
                 @-ms-keyframes fadeIn {
-                    0% {opacity:1;}
-                    50% {opacity:0.7;}
-                    100% {opacity:1;}
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.7;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
             </style>
 
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer bg-blue-50 border-2 border-blue-300 relative">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+            <div class="shadow bg-white cursor-pointer bg-blue-50 border-2 border-blue-300 relative flex">
+                <div class="bg-cover w-20 shrink-0"
+                     style="background-image: url('/assets/img/avatars/0.jpeg');"></div>
+                <div class="grow p-4 m-0 text-lg font-bold">
+                    <div>
+                        От
+                        <span class="text-blue-800">Вера полевая</span>
+                    </div>
+                    <div>
+                        Лиля, это мама. Я вчера освободилась. Давай поговорим
+                    </div>
                 </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
-                </div>
-                <div class="absolute -top-5 -left-2 bg-blue-500 leading-none px-2 py-0.5 text-white rounded font-bold text-sm fade">
+                <div class="absolute -top-2 -right-2 bg-blue-500 leading-none px-2 py-0.5 text-white rounded font-bold text-sm fade">
                     Новое
                 </div>
             </div>
 
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
-                </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
-                </div>
-            </div>
-
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
-                </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
+            <div class="shadow bg-white cursor-pointer flex">
+                <div class="bg-cover w-20 shrink-0"
+                     style="background-image: url('/assets/img/avatars/1.jpeg');"></div>
+                <div class="grow p-4 m-0">
+                    <div>
+                        От
+                        <span class="text-blue-800">Петров Алексей</span>
+                    </div>
+                    <div>
+                        Кратки текст сообщения который виден тут...
+                    </div>
                 </div>
             </div>
 
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
-                </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
-                </div>
-            </div>
-
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
-                </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
+            <div class="shadow bg-white cursor-pointer flex">
+                <div class="bg-cover w-20 shrink-0"
+                     style="background-image: url('/assets/img/avatars/2.jpeg');"></div>
+                <div class="grow p-4 m-0">
+                    <div>
+                        От
+                        <span class="text-blue-800">Петров Алексей</span>
+                    </div>
+                    <div>
+                        Кратки текст сообщения который виден тут...
+                    </div>
                 </div>
             </div>
 
-            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
-                <div>
-                    От
-                    <span class="text-blue-800 font-bold">Петров Алексей</span>
-                    для
-                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
-                </div>
-                <div>
-                    Кратки текст сообщения который виден тут...
+            <div class="shadow bg-white cursor-pointer flex">
+                <div class="bg-cover w-20 shrink-0"
+                     style="background-image: url('/assets/img/avatars/3.jpeg');"></div>
+                <div class="grow p-4 m-0">
+                    <div>
+                        От
+                        <span class="text-blue-800">Петров Алексей</span>
+                    </div>
+                    <div>
+                        Кратки текст сообщения который виден тут...
+                    </div>
                 </div>
             </div>
 
