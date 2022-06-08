@@ -119,8 +119,9 @@
                         Удалить страницу
                     </a>
 
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="POST" action="{{ route('profile.delete', auth()->user()) }}">
                         @csrf
+                        @method('DELETE')
                         <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
 
                              @close.stop="showModal = false"
