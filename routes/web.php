@@ -20,4 +20,10 @@ Route::get('/', function () {
 Route::get('/profile', \App\Http\Controllers\ProfileController::class)
     ->middleware(['auth'])->name('profile');
 
-require __DIR__.'/auth.php';
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'search'])
+    ->name('search');
+
+Route::get('/search/result', [\App\Http\Controllers\SearchController::class, 'result'])
+    ->name('search.result');
+
+require __DIR__ . '/auth.php';
