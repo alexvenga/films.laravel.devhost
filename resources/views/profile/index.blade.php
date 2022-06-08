@@ -251,44 +251,32 @@
                 </a>
             </div>
 
-            {{--
+
             <div class="bg-white shadow border p-4">
-                <h3>Друзья</h3>
+                <h3 class="font-bold">Друзья</h3>
                 <div class="flex items-center justify-around flex-wrap">
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/1.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Наталья
+                        <img alt="" src="/assets/img/avatars/1.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Ольга
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/2.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Иван
+                        <img alt="" src="/assets/img/avatars/2.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Георгий
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/3.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Светлана
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/4.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Мария
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/5.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Саша
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/6.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Ксения
+                        <img alt="" src="/assets/img/avatars/3.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Ульяна
                     </div>
 
                 </div>
+
+                <div class="text-sm text-blue-800 mt-4">Все друзья</div>
             </div>
 
+            {{--
             <div class="bg-white shadow border p-4">
                 <h3>Друзья онлайн</h3>
                 <div class="flex items-center justify-around flex-wrap">
