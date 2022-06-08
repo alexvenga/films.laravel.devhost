@@ -122,6 +122,8 @@
         </div>
     </div>
 
+
+
     @foreach($posts as $postItem)
         <div class="bg-white shadow border p-4">
             <div class="flex items-center justify-between">
