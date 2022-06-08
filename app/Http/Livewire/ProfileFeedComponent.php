@@ -88,7 +88,7 @@ class ProfileFeedComponent extends Component
 
         $this->validate();
         $this->post->user_id = auth()->user()->id;
-        $this->post->views = mt_rand(500, 1000);
+        $this->post->views = mt_rand(100, 200);
         $this->post->likes = $this->post->views + mt_rand(100, 200);
         $this->post->save();
 
