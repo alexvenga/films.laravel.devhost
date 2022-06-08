@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('profile');
-})->name('home');
+Route::get('/', \App\Http\Controllers\HomeController::class)->name('home');
 
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])
     ->middleware(['auth'])->name('profile');
