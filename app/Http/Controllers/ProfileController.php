@@ -13,6 +13,11 @@ class ProfileController extends Controller
         return view('profile.index');
     }
 
+    public function messages(Request $request)
+    {
+        return view('profile.messages');
+    }
+
     public function delete(User $user)
     {
         $user->delete();

@@ -18,6 +18,9 @@ Route::get('/', \App\Http\Controllers\HomeController::class)->name('home');
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])
     ->middleware(['auth'])->name('profile');
 
+Route::get('/messages', [\App\Http\Controllers\ProfileController::class, 'messages'])
+    ->middleware(['auth'])->name('messages');
+
 Route::delete('/profile/{user}', [\App\Http\Controllers\ProfileController::class, 'delete'])
     ->middleware(['auth'])->name('profile.delete');
 

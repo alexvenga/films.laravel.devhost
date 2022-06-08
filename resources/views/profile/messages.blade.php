@@ -176,168 +176,139 @@
             </ul>
         </div>
 
-        <div class="w-56 shrink-0 space-y-4 text-sm">
+        <div class="grow space-y-4">
 
-            <div class="bg-white shadow border p-4">
-                <livewire:profile-photo-component/>
-            </div>
+            <div class="p-4 shadow bg-white flex items-center justify-between">
+                <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                    <div class="shadow w-8 h-8 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                         style="background-image: url({{ auth()->user()->getAvatarPath() }});"></div>
+                    <div>{{ auth()->user()->name }}</div>
+                </div>
 
-            <div class="bg-white shadow border p-4">
-                <a href="#" class="flex items-center text-blue-900">
-                    <x-gmdi-link-o class="w-5 h-5 mr-2"/>
-                    Ссылка на профиль
-                </a>
-            </div>
-
-            {{--
-            <div class="bg-white shadow border p-4">
-                <h3>Друзья</h3>
-                <div class="flex items-center justify-around flex-wrap">
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/1.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Наталья
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/2.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Иван
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/3.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Светлана
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/4.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Мария
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/5.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Саша
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/6.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Ксения
-                    </div>
-
+                <div class="flex items-center space-x-4 font-bold">
+                    <span class="text-lg">
+                        Общение
+                    </span>
+                    <x-gmdi-search-o class="w-6 h-6 text-blue-800"/>
                 </div>
             </div>
 
-            <div class="bg-white shadow border p-4">
-                <h3>Друзья онлайн</h3>
-                <div class="flex items-center justify-around flex-wrap">
+            <style>
+                .fade {
+                    animation: fadeIn ease 1s infinite;
+                    -webkit-animation: fadeIn ease 1s infinite;
+                    -moz-animation: fadeIn ease 1s infinite;
+                    -o-animation: fadeIn ease 1s infinite;
+                    -ms-animation: fadeIn ease 1s infinite;
+                }
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/7.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Ангелина
-                    </div>
+                @keyframes fadeIn {
+                    0% {opacity:1;}
+                    50% {opacity:0.7;}
+                    100% {opacity:1;}
+                }
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/8.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Мира
-                    </div>
+                @-moz-keyframes fadeIn {
+                    0% {opacity:1;}
+                    50% {opacity:0.7;}
+                    100% {opacity:1;}
+                }
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/9.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Юлия
-                    </div>
+                @-webkit-keyframes fadeIn {
+                    0% {opacity:1;}
+                    50% {opacity:0.7;}
+                    100% {opacity:1;}
+                }
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/10.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Дмитрий
-                    </div>
+                @-o-keyframes fadeIn {
+                    0% {opacity:1;}
+                    50% {opacity:0.7;}
+                    100% {opacity:1;}
+                }
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/11.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Михаил
-                    </div>
+                @-ms-keyframes fadeIn {
+                    0% {opacity:1;}
+                    50% {opacity:0.7;}
+                    100% {opacity:1;}
+                }
+            </style>
 
-                    <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/users/12.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Мила
-                    </div>
-
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer bg-blue-50 border-2 border-blue-300 relative">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+                <div class="absolute -top-5 -left-2 bg-blue-500 leading-none px-2 py-0.5 text-white rounded font-bold text-sm fade">
+                    Новое
                 </div>
             </div>
-            --}}
 
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+            </div>
+
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+            </div>
+
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+            </div>
+
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+            </div>
+
+            <div class="p-4 shadow bg-white space-y-2 cursor-pointer">
+                <div>
+                    От
+                    <span class="text-blue-800 font-bold">Петров Алексей</span>
+                    для
+                    <span class="text-blue-800 font-bold">{{ auth()->user()->name }}</span>
+                </div>
+                <div>
+                    Кратки текст сообщения который виден тут...
+                </div>
+            </div>
 
         </div>
-        <div class="grow">
-            <livewire:profile-user-info-component/>
-
-            <div class="mt-4">
-
-                <livewire:profile-feed-component/>
-
-            </div>
-        </div>
     </div>
-
-    {{--
-    <div x-data="{ showModal: false }" class="fixed bottom-0 right-0">
-        <a href="{{ route('profile') }}"
-           class="text-gray-300"
-           @click.prevent="showModal = true">
-            Удалить
-        </a>
-        <form method="POST" action="{{ route('profile.delete', auth()->user()) }}">
-            @csrf
-            @method('DELETE')
-            <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
-
-                 @close.stop="showModal = false"
-                 @keydown.escape.stop="showModal = false"
-                 @click.stop="showModal = false"
-                 x-show="showModal" x-cloak
-            >
-                <div class="relative p-4 w-full max-w-2xl"
-                     x-show="showModal" x-cloak
-                     x-transition:enter="ease-out duration-300"
-                     x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                     x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                     x-transition:leave="ease-in duration-200"
-                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded shadow dark:bg-gray-700"
-                         @click.stop="">
-                        <!-- Modal header -->
-                        <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                Удалить аккаунт (НАСТОЯЩЕЕ УДАЛЕНИЕ)
-                            </h3>
-                            <button type="button"
-                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                    @click.stop="showModal = false">
-                                <x-gmdi-close class="w-5 h-5"/>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-6 space-y-4">
-
-                            <p>
-                                Аккаунт и все данные будут удалены!<br>
-                                Операция необратима!
-                            </p>
-
-                        </div>
-                        <!-- Modal footer -->
-                        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-                            <button type="submit"
-                                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-                                Удалить
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    --}}
 
 </x-app-layout>
