@@ -56,7 +56,7 @@
 
             <div @click="showAds = false">
                 <div class="h-10 bg-gray-200 relative text-right flex items-center justify-end text-lg">
-                    <div class="absolute w-0 h-10 bg-green-500 top-0 left-0 z-40" id="fillAdsLine"></div>
+                    <div class="absolute w-0 h-10 bg-green-500 top-0 left-0 z-40 transition transition-all duration-1000" id="fillAdsLine"></div>
                     <div class="px-2 relative z-50" x-show="countdownSeconds>=1">
                         До закрытия <span x-text="countdownSeconds"></span> сек.
                     </div>
@@ -66,7 +66,20 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-center">Изображение</div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-center font-bold">
+                    <div style="font-size: 22px;">Машинка для удаления катышек</div>
+                    <div style="font-size: 28px;">Только для вас!</div>
+                </div>
+                <div class="p-4">
+                    <img src="/assets/img/861143.jpeg" alt="" class="block w-full h-auto">
+                </div>
+                <div class="p-4 text-center">
+                    <button class="text-white bg-cyan-700 rounded-md leading-none uppercase px-8 py-4 text-lg font-bold">
+                        Заказать
+                    </button>
+                </div>
+            </div>
 
             <div></div>
 
