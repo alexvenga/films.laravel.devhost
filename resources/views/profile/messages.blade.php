@@ -274,7 +274,7 @@
                 <div class="grow p-4 m-0 text-lg font-bold">
                     <div>
                         От
-                        <span class="text-blue-800">Вера полевая</span>
+                        <span class="text-blue-800">Вера Полевая</span>
                     </div>
                     <div>
                         Лиля, это мама. Я вчера освободилась. Давай поговорим
