@@ -71,8 +71,8 @@
                     <div style="font-size: 22px;">Машинка для удаления катышек</div>
                     <div style="font-size: 28px;">Только для вас!</div>
                 </div>
-                <div class="p-4">
-                    <img src="/assets/img/861143.jpeg" alt="" class="block w-full h-auto">
+                <div class="py-4">
+                    <img src="/assets/img/katish.jpg" alt="" class="block w-full h-auto">
                 </div>
                 <div class="p-4 text-center">
                     <button class="text-white bg-cyan-700 rounded-md leading-none uppercase px-8 py-4 text-lg font-bold">
