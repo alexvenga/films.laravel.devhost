@@ -7,9 +7,9 @@
 <body style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;">
 <div style="width: 1000px; height: 500px; display: flex; flex-wrap: wrap; overflow: hidden;">
     <?php for ($i = 1; $i <= 1000; $i++) {
-        $r = mt_rand(100,255);
-        $g = mt_rand(100,255);
-        $b = mt_rand(100,255);
+        $r = mt_rand(150,255);
+        $g = mt_rand(150,255);
+        $b = mt_rand(150,255);
         ?>
         <div
             style="background-color: rgb(<?php echo $r; ?>,<?php echo $g; ?>,<?php echo $b; ?>); display: block; flex-grow: 1;"
