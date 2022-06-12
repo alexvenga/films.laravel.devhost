@@ -14,7 +14,7 @@
         <div style="background-color: rgb(<?php echo $r; ?>,<?php echo $g; ?>,<?php echo $b; ?>); display: block; flex-grow: 1;"
         ><?php echo substr(md5(mt_rand()), 0, 2); ?></div>
     <?php } ?>
-    <a href="#" style="display: block; position: absolute; width: 1000px; height: 500px; top:0; right: 0;">
+    <a href="/egg.html" style="display: block; position: absolute; width: 1000px; height: 500px; top:0; right: 0;">
 
     </a>
 </div>
