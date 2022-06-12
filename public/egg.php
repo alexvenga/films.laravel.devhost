@@ -5,11 +5,18 @@
     <title>Title</title>
 </head>
 <body style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;">
-<div style="text-align: center;">
-    <a href="/egg.html"><img src="/assets/img/qr-code.gif" width="570" height="570" border="0" title="QR код"></a>
-    <div>
-        3062d4f3570eee39b4988c7fd868df355a119e5525267be0829a2d51780b342af5425e71f499f18c8247f5e7ebf55e3d
-    </div>
+<div style="width: 1000px; height: 500px; display: flex; flex-wrap: wrap; overflow: hidden; position: relative;">
+    <?php for ($i = 1; $i <= 1000; $i++) {
+        $r = mt_rand(100, 255);
+        $g = mt_rand(100, 255);
+        $b = mt_rand(100, 255);
+        ?>
+        <div style="background-color: rgb(<?php echo $r; ?>,<?php echo $g; ?>,<?php echo $b; ?>); display: block; flex-grow: 1;"
+        ><?php echo substr(md5(mt_rand()), 0, 2); ?></div>
+    <?php } ?>
+    <a href="#" style="display: block; position: absolute; width: 1000px; height: 500px; top:0; right: 0;">
+
+    </a>
 </div>
 </body>
 </html>
