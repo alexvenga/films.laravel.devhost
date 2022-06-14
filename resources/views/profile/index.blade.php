@@ -1,5 +1,6 @@
 <x-app-layout>
 
+    {{--
     @if(request()->session()->get('old') == 'yes')
         <div x-data="{ showModal: true }">
             <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
@@ -55,6 +56,7 @@
             </div>
         </div>
     @endif
+    --}}
 
     <div class="container flex mt-3 space-x-4">
 

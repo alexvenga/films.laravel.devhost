@@ -274,7 +274,7 @@
                 <div class="grow p-4 m-0 text-lg font-bold">
                     <div>
                         От
-                        <span class="text-blue-800">Вера Полевая</span>
+                        <span class="text-blue-800">Вера Сапронова</span>
                     </div>
                     <div>
                         Лиля, это мама. Я вчера освободилась. Давай поговорим
@@ -287,42 +287,42 @@
 
             <div class="shadow bg-white cursor-pointer flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/1.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/4.jpg');"></div>
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Ольга Перевалова</span>
+                        <span class="text-blue-800">Арсений Дроздов</span>
                     </div>
                     <div>
-                        я пришлю тебе конспект
+                        знаю, сам удивлен
                     </div>
                 </div>
             </div>
 
             <div class="shadow bg-white cursor-pointer flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/2.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/5.jpeg');"></div>
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Георгий Пащенко</span>
+                        <span class="text-blue-800">Всеволод Ткачев</span>
                     </div>
                     <div>
-                        хорошо
+                        Буду!
                     </div>
                 </div>
             </div>
 
             <div class="shadow bg-white cursor-pointer flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/3.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/7.jpeg');"></div>
                 <div class="grow p-4 m-0">
                     <div>
                         От
-                        <span class="text-blue-800">Ульяна Бондарь</span>
+                        <span class="text-blue-800">Александр Волков</span>
                     </div>
                     <div>
-                        я опоздаю на 15 минут
+                        ОК
                     </div>
                 </div>
             </div>
