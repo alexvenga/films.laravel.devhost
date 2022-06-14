@@ -270,14 +270,14 @@
 
             <div class="shadow bg-white cursor-pointer bg-blue-50 border-2 border-blue-300 relative flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/0.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/vs.jpeg');"></div>
                 <div class="grow p-4 m-0 text-lg font-bold">
                     <div>
                         От
                         <span class="text-blue-800">Вера Сапронова</span>
                     </div>
                     <div>
-                        Лиля, это мама. Я вчера освободилась. Давай поговорим
+                        Научилась готовить суп палоц) Для тебя все самое остренькое))🌶🌶🌶
                     </div>
                 </div>
                 <div class="absolute -top-2 -right-2 bg-blue-500 leading-none px-2 py-0.5 text-white rounded font-bold text-sm fade">
