@@ -270,7 +270,7 @@
 
             <div class="shadow bg-white cursor-pointer bg-blue-50 border-2 border-blue-300 relative flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/vs.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/vs.jpg');"></div>
                 <div class="grow p-4 m-0 text-lg font-bold">
                     <div>
                         От
@@ -301,7 +301,7 @@
 
             <div class="shadow bg-white cursor-pointer flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/5.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/5.jpg');"></div>
                 <div class="grow p-4 m-0">
                     <div>
                         От
@@ -315,7 +315,7 @@
 
             <div class="shadow bg-white cursor-pointer flex">
                 <div class="bg-cover w-20 shrink-0"
-                     style="background-image: url('/assets/img/avatars/7.jpeg');"></div>
+                     style="background-image: url('/assets/img/avatars/7.jpg');"></div>
                 <div class="grow p-4 m-0">
                     <div>
                         От
