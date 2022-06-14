@@ -259,18 +259,18 @@
                 <div class="flex items-center justify-around flex-wrap">
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/1.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Ольга
+                        <img alt="" src="/assets/img/avatars/vs.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/2.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Георгий
+                        <img alt="" src="/assets/img/avatars/5.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Всеволод
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/3.jpeg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Ульяна
+                        <img alt="" src="/assets/img/avatars/7.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Александр
                     </div>
 
                 </div>
