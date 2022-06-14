@@ -22,6 +22,10 @@
             <div class="text-xs text-gray-700 cursor-pointer">Удалить</div>
         </div>
         <div class="mt-4">Милая!!! С нашей годовщиной!</div>
+        <div class="mt-4">
+            <img src="/assets/img/marry.jpg" alt=""
+                 class="w-full h-auto shadow border">
+        </div>
         <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
             <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
                 <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"/>
