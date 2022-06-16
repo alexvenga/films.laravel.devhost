@@ -33,7 +33,7 @@
                     Новости:
                 </div>
 
-                <div class="flex space-x-4 mt-4 bg-blue-50 hover:bg-gray-50">
+                <div class="flex space-x-4 mt-4 cursor-pointer bg-blue-50 hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
                          style="background-image: url('/assets/news-video/news-1.jpg')"></div>
                     <div class="flex flex-col justify-center">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div class="flex space-x-4 mt-4 hover:bg-gray-50">
+                <div class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
                          style="background-image: url('/assets/news-video/news-2.jpeg')"></div>
                     <div class="flex flex-col justify-center">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
 
-                <div class="flex space-x-4 mt-4 hover:bg-gray-50">
+                <div class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
-                         style="background-image: url('/assets/news-video/news-3.jpeg')"></div>
+                         style="background-image: url('/assets/news-video/news-3.jpg')"></div>
                     <div class="flex flex-col justify-center">
                         <div class="font-bold text-lg">
                             В Москве стоит аномально сильная жара
