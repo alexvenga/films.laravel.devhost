@@ -27,6 +27,49 @@
 
             </form>
 
+            <div class="mt-12">
+
+                <div class="flex space-x-4 hover:bg-gray-50 bg-blue-50">
+                    <div class="w-40 h-20 bg-cover bg-center shadow"
+                         style="background-image: url('/assets/news-video/news-1.jpg')"></div>
+                    <div class="flex flex-col justify-center">
+                        <div class="font-bold text-xl">
+                            Евгений Курносов назначен и.о. губернатора
+                        </div>
+                        <div class="text-gray-500">
+                            Топ новость дня
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4 mt-6 hover:bg-gray-50">
+                    <div class="w-40 h-20 bg-cover bg-center shadow"
+                         style="background-image: url('/assets/news-video/news-2.jpeg')"></div>
+                    <div class="flex flex-col justify-center">
+                        <div class="font-bold text-lg">
+                            В кинопрокат вышел новый фильм "Агентство Антитроль"
+                        </div>
+                        <div class="text-gray-500">
+                            Новость дня
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4 mt-6 hover:bg-gray-50">
+                    <div class="w-40 h-20 bg-cover bg-center shadow"
+                         style="background-image: url('/assets/news-video/news-3.jpeg')"></div>
+                    <div class="flex flex-col justify-center">
+                        <div class="font-bold text-lg">
+                            В Москве стоит аномально сильная жара
+                        </div>
+                        <div class="text-gray-500">
+                            Новость дня
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         <div class="p-4 text-gray-500 text-center">
             &copy; Все права защищены
@@ -34,6 +77,7 @@
 
     </div>
 
+    {{--
     <div class="fixed inset-0 z-40" x-data="{
         allSeconds: 20,
         countdownSeconds: 20,
@@ -85,5 +129,6 @@
 
         </div>
     </div>
+    --}}
 
 </x-app-layout>
