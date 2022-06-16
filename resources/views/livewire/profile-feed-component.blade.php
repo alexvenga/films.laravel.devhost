@@ -12,6 +12,7 @@
         </label>
     </div>
 
+    {{--
     <div class="bg-white shadow border p-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
@@ -37,12 +38,79 @@
             </div>
         </div>
     </div>
+    --}}
+
+    <div class="bg-white shadow border p-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                     style="background-image: url('/assets/img/avatars/8.jpg');"></div>
+                <div>Вредина</div>
+            </div>
+            <div class="text-xs text-gray-700 cursor-pointer">Удалить</div>
+        </div>
+        <div class="mt-4">Жирная!</div>
+        <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+            <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
+                <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"/>
+                <div>{{ mt_rand(0,100) }}</div>
+            </div>
+            <div class="flex items-center space-x-1 font-bold text-gray-300 text-sx">
+                <x-gmdi-visibility-o class="h-4 w-4"/>
+                <div>{{ mt_rand(100,200) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white shadow border p-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                     style="background-image: url('/assets/img/avatars/9.jpg');"></div>
+                <div>Алисочка</div>
+            </div>
+            <div class="text-xs text-gray-700 cursor-pointer">Удалить</div>
+        </div>
+        <div class="mt-4">Похудей или сдохни.</div>
+        <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+            <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
+                <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"/>
+                <div>{{ mt_rand(0,100) }}</div>
+            </div>
+            <div class="flex items-center space-x-1 font-bold text-gray-300 text-sx">
+                <x-gmdi-visibility-o class="h-4 w-4"/>
+                <div>{{ mt_rand(100,200) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white shadow border p-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                     style="background-image: url('/assets/img/avatars/10.jpg');"></div>
+                <div>Димон</div>
+            </div>
+            <div class="text-xs text-gray-700 cursor-pointer">Удалить</div>
+        </div>
+        <div class="mt-4">Королева красоты среди жирожопов?</div>
+        <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+            <div class="flex items-center space-x-1 font-bold bg-gray-100 rounded-xl px-4 py-2 leading-none">
+                <x-gmdi-favorite class="h-5 w-5 cursor-pointer hover:text-red-700"/>
+                <div>{{ mt_rand(0,100) }}</div>
+            </div>
+            <div class="flex items-center space-x-1 font-bold text-gray-300 text-sx">
+                <x-gmdi-visibility-o class="h-4 w-4"/>
+                <div>{{ mt_rand(100,200) }}</div>
+            </div>
+        </div>
+    </div>
 
     @foreach($posts as $postItem)
         <div class="bg-white shadow border p-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
-                    <div class="shadow w-8 h-8 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                    <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
                          style="background-image: url({{ $postItem->user->getAvatarPath() }});"></div>
                     <div>{{ $postItem->user->name }}</div>
                 </div>
