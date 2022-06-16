@@ -259,32 +259,38 @@
                 <div class="flex items-center justify-around flex-wrap">
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/1.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/1.jpg')"></div>
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/2.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/2.jpg')"></div>
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/3.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/3.jpg')"></div>
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/4.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/4.jpg')"></div>
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/5.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/5.jpg')"></div>
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/friends/6.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
+                             style="background-image: url('/assets/img/friends/6.jpg')"></div>
                         Вера
                     </div>
 
