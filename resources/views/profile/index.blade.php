@@ -259,18 +259,33 @@
                 <div class="flex items-center justify-around flex-wrap">
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/vs.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        <img alt="" src="/assets/img/friends/1.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
                         Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/5.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Всеволод
+                        <img alt="" src="/assets/img/friends/2.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
                     </div>
 
                     <div class="text-xs text-center mt-2">
-                        <img alt="" src="/assets/img/avatars/7.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
-                        Александр
+                        <img alt="" src="/assets/img/friends/3.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/friends/4.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/friends/5.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
+                    </div>
+
+                    <div class="text-xs text-center mt-2">
+                        <img alt="" src="/assets/img/friends/6.jpg" class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow">
+                        Вера
                     </div>
 
                 </div>
