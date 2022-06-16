@@ -202,7 +202,7 @@
                 Евгений Курносов назначен и.о. губернатора
             </div>
 
-
+            {{--
             <div class="shadow bg-white cursor-pointer flex">
                 <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
                 <video
@@ -227,9 +227,10 @@
                 </video>
                 <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
             </div>
+            --}}
 
-            {{--
             <div>
+
                 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
                 <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
                 <video id="player" playsinline controls data-poster="/assets/news-video/news-1.jpg"
@@ -239,7 +240,6 @@
                     <source src="/assets/news-video/Guber.mov"/>
                 </video>
             </div>
-            --}}
 
             <div class="flex justify-around text-lg">
                 <div class="flex items-center space-x-1 font-bold bg-gray-200 rounded-xl px-4 py-2 leading-none">
