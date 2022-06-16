@@ -18,6 +18,11 @@ class ProfileController extends Controller
         return view('profile.messages');
     }
 
+    public function video(Request $request)
+    {
+        return view('profile.video');
+    }
+
     public function delete(User $user)
     {
         $user->delete();

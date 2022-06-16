@@ -33,7 +33,7 @@
                     Новости:
                 </div>
 
-                <div class="flex space-x-4 mt-4 cursor-pointer bg-blue-50 hover:bg-gray-50">
+                <a href="{{ route('video') }}" class="flex space-x-4 mt-4 cursor-pointer bg-blue-50 hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
                          style="background-image: url('/assets/news-video/news-1.jpg')"></div>
                     <div class="flex flex-col justify-center">
@@ -44,9 +44,9 @@
                             Топ новость дня
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
+                <a href="#" class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
                          style="background-image: url('/assets/news-video/news-2.jpeg')"></div>
                     <div class="flex flex-col justify-center">
@@ -57,9 +57,9 @@
                             Новость дня
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
+                <a href="#" class="flex space-x-4 mt-4 cursor-pointer hover:bg-gray-50">
                     <div class="w-40 h-20 bg-cover bg-center shadow"
                          style="background-image: url('/assets/news-video/news-3.jpg')"></div>
                     <div class="flex flex-col justify-center">
@@ -70,7 +70,7 @@
                             Новость дня
                         </div>
                     </div>
-                </div>
+                </a>
 
             </div>
 

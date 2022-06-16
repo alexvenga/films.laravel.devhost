@@ -21,6 +21,9 @@ Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])
 Route::get('/messages', [\App\Http\Controllers\ProfileController::class, 'messages'])
     ->middleware(['auth'])->name('messages');
 
+Route::get('/video', [\App\Http\Controllers\ProfileController::class, 'video'])
+    ->middleware(['auth'])->name('video');
+
 Route::delete('/profile/{user}', [\App\Http\Controllers\ProfileController::class, 'delete'])
     ->middleware(['auth'])->name('profile.delete');
 
