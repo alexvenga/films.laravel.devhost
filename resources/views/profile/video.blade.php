@@ -203,7 +203,28 @@
             </div>
 
             <div class="shadow bg-white cursor-pointer flex">
-                <img src="/assets/news-video/news-1.jpg">
+                <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+                <video
+                    id="my-video"
+                    class="video-js"
+                    controls
+                    autoplay
+                    preload
+                    width="800"
+                    height="450"
+                    poster="/assets/news-video/news-1.jpg"
+                    data-setup="{}"
+                >
+                    <source src="/assets/news-video/Guber.mov" />
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                        >supports HTML5 video</a
+                        >
+                    </p>
+                </video>
+                <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
             </div>
 
             <div class="flex justify-around text-lg">
