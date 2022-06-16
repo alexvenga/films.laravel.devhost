@@ -27,6 +27,11 @@
             <b>{{ $user->education }}</b>
         </div>
     @endif
+    @if(!empty($user->about))
+        <div class="mt-4">
+            {{ $user->about }}
+        </div>
+    @endif
 
     <form wire:submit.prevent="save">
         <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"
@@ -129,6 +134,22 @@
                                    wire:model.lazy="user.education"
                                    placeholder="Высшее"
                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            @if($errors->has('user.about'))
+                                <p class="mt-1 text-sm text-red-600 dark:text-red-500">
+                                    {{ $errors->first('user.about') }}
+                                </p>
+                            @endif
+                        </div>
+
+                        <div>
+                            <label for="about" class="block mb-1 font-medium text-gray-900 dark:text-gray-300">
+                                О себе
+                            </label>
+                            <textarea type="text" id="about" rows="4"
+                                      wire:model.lazy="user.about"
+                                      placeholder="Коротко о себе"
+                                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            ></textarea>
                             @if($errors->has('user.education'))
                                 <p class="mt-1 text-sm text-red-600 dark:text-red-500">
                                     {{ $errors->first('user.education') }}

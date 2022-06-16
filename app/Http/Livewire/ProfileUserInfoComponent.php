@@ -18,6 +18,7 @@ class ProfileUserInfoComponent extends Component
         'user.city'       => 'nullable|string|max:191',
         'user.status'     => 'nullable|string|max:191',
         'user.education'  => 'nullable|string|max:191',
+        'user.about'  => 'nullable|string|max:191',
     ];
 
     public function mount()
