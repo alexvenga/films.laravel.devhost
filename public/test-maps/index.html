@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+            type="text/javascript"></script>
     <script>
         /**
          * Yandex Suggest API
          */
 
-        $(function() {
-            var timer = null
-                , timeout = 800;
 
-            $('#js-av-search-place-name').on('keyup', function() {
+        $(function () {
+
+
+            let timer = null,
+                timeout = 800;
+
+            $('#js-av-search-place-name').on('keyup', function () {
                 var value = $(this).val();
 
                 clearTimeout(timer);
 
-                timer = setTimeout(function() {
+                timer = setTimeout(function () {
                     var $suggest = $('#js-av-search-place-name')
                         , $results = $('#js-av-search-place-name-results').removeClass('visible').empty()
                         , $close = $('#js-av-search-place-name-close');
@@ -29,21 +33,23 @@
                         return false;
                     }
 
+                    value = 'Россия, Московская область, ' + value;
+
                     var $ul = $('<ul/>').appendTo($results);
 
                     ymaps.suggest(value)
-                        .then(function(items) {
+                        .then(function (items) {
                             console.log('SUGGESTED');
                             //$results.addClass('visible');
                             //$close.addClass('visible');
 
                             if (items.length > 0) {
-                                items.map(function(item) {
+                                items.map(function (item) {
                                     console.log(item);
-                                    $ul.append($('<li/>').text(item.value));
+                                    $ul.append($('<li/>').text(item.displayName));
                                 });
 
-                                $('li', $results).on('click', function() {
+                                $('li', $results).on('click', function () {
                                     $suggest.val($(this).text().trim());
                                     $results.empty();
                                 });
@@ -51,7 +57,7 @@
                                 $ul.append($('<li/>').addClass('message').text('No result found.'));
                             }
 
-                            $close.on('click', function() {
+                            $close.on('click', function () {
                                 $suggest.val($(this).text().trim());
                                 $results.empty();
                                 $results.removeClass('visible');
@@ -59,7 +65,7 @@
                                 timer = null;
                             });
                         })
-                        .catch(function(err) {
+                        .catch(function (err) {
                             throw err;
                         });
                 }, timeout);
