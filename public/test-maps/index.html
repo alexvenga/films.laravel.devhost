@@ -45,8 +45,11 @@
 
                             if (items.length > 0) {
                                 items.map(function (item) {
-                                    console.log(item);
-                                    $ul.append($('<li/>').text(item.displayName));
+                                    //console.log(item);
+                                    let text = item.displayName;
+                                    text = text.replace(', Московская область, Россия', '');
+                                    text = text.replace(', Россия', '');
+                                    $ul.append($('<li/>').text(text));
                                 });
 
                                 $('li', $results).on('click', function () {
