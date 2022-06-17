@@ -11,9 +11,18 @@ class ProfileChatComponent extends Component
 
     public array $messages = [];
 
+    public bool $showAnswer = false;
+
     public array $rules = [
         'message' => 'required|string',
     ];
+
+    protected $listeners = ['addAnswer' => 'addAnswer'];
+
+
+    public function addAnswer() {
+        $this->showAnswer = true;
+    }
 
     public function updated($field)
     {
