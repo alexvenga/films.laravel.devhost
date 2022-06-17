@@ -268,7 +268,7 @@
                 }
             </style>
 
-            <div class="shadow bg-white cursor-pointer flex">
+            <div class="shadow bg-white p-4">
 
                 <div>
 
