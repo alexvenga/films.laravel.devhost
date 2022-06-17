@@ -254,50 +254,7 @@
             </div>
 
 
-            <div class="bg-white shadow border p-4">
-                <h3 class="font-bold">Друзья</h3>
-                <div class="flex items-center justify-around flex-wrap">
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/1.jpg')"></div>
-                        Вера
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/2.jpg')"></div>
-                        Вера
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/3.jpg')"></div>
-                        Вера
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/4.jpg')"></div>
-                        Вера
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/5.jpg')"></div>
-                        Вера
-                    </div>
-
-                    <div class="text-xs text-center mt-2">
-                        <div class="mb-1 h-12 w-12 overflow-hidden rounded-full shadow bg-center bg-cover"
-                             style="background-image: url('/assets/img/friends/6.jpg')"></div>
-                        Вера
-                    </div>
-
-                </div>
-
-                <div class="text-sm text-blue-800 mt-4">Все друзья</div>
-            </div>
+            <livewire:profile-friends-component/>
 
             {{--
             <div class="bg-white shadow border p-4">

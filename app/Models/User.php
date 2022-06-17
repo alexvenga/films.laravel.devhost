@@ -54,6 +54,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function friends()
+    {
+        return $this->hasMany(Friend::class);
+    }
+
     public function getAvatarPath(): string
     {
         if (!empty($this->avatar)) {
