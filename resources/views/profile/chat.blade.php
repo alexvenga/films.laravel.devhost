@@ -270,15 +270,7 @@
 
             <div class="shadow bg-white p-4">
 
-                <div>
-
-                    chat
-
-                </div>
-
-                <div>
-                    Message
-                </div>
+                <livewire:profile-chat-component/>
 
             </div>
 
