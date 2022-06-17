@@ -192,7 +192,7 @@
 
                 <div class="flex items-center space-x-4 font-bold">
                     <span class="text-lg">
-                        Общение с <b>Алевтины Шолохова</b>
+                        Общение с <b>Алевтина Шолохова</b>
                     </span>
                     <x-gmdi-search-o class="w-6 h-6 text-blue-800"/>
                 </div>
