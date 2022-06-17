@@ -184,15 +184,15 @@
         <div class="grow space-y-4">
 
             <div class="p-4 shadow bg-white flex items-center justify-between">
-                <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
+                <div class="flex items-center space-x-4 font-bold text-blue-800">
                     <div class="shadow w-8 h-8 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
-                         style="background-image: url({{ auth()->user()->getAvatarPath() }});"></div>
-                    <div>{{ auth()->user()->name }}</div>
+                         style="background-image: url('/assets/img/chat/ash.jpg');"></div>
+                    <div>Алевтина Шолохова</div>
                 </div>
 
                 <div class="flex items-center space-x-4 font-bold">
                     <span class="text-lg">
-                        Общение с <b>Алевтина Шолохова</b>
+                        Общение
                     </span>
                     <x-gmdi-search-o class="w-6 h-6 text-blue-800"/>
                 </div>

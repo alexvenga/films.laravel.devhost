@@ -3,8 +3,8 @@
     @forelse ($messages as $message)
         <div class="py-4">
             <div class="flex items-center justify-end space-x-4">
-                <div class="text-blue-800 text-sm">{{ auth()->user()->name }}</div>
-                <div class="flex items-center space-x-4 text-sm font-bold text-blue-800 justify-end">
+                <div class="text-blue-800 font-bold">{{ auth()->user()->name }}</div>
+                <div class="flex items-center space-x-4 font-bold text-blue-800 justify-end">
                     <div class="shadow w-10 h-10 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
                          style="background-image: url('{{ auth()->user()->getAvatarPath() }}');"></div>
                 </div>
@@ -13,6 +13,20 @@
                 {{ $message }}
             </div>
         </div>
+        @if($loop->first)
+            <div class="py-4">
+                <div class="flex items-center justify-start space-x-4">
+                    <div class="flex items-center space-x-4 font-bold text-blue-800 justify-end">
+                        <div class="shadow w-10 h-10 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
+                             style="background-image: url('/assets/img/chat/ash.jpg');"></div>
+                    </div>
+                    <div class="text-blue-800 font-bold">Алевтина Шолохова</div>
+                </div>
+                <div class="text-left font-bold text-lg pl-14">
+                    надо встретиться.
+                </div>
+            </div>
+        @endif
     @empty
         <div class="font-bold text-gray-400 py-4">Начните переписку...</div>
     @endforelse
@@ -24,7 +38,7 @@
         <textarea id="message"
                   placeholder="Ваше сообщение"
                   wire:model.lazy="message"
-                  rows="3"
+                  rows="2"
                   class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:bg-white focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         ></textarea>
         @if($errors->has('message'))
