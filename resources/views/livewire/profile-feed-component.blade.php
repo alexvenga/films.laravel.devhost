@@ -1,4 +1,4 @@
-<div class="space-y-4">
+<div class="space-y-4" x-data="{ showhate : false}">
     <div class="bg-white shadow border p-4 flex space-x-4 items-center justify-between">
         <div class="text-blue-800 flex space-x-4 items-center cursor-pointer"
              wire:click.prevent="create">
@@ -40,7 +40,7 @@
     </div>
     --}}
 
-    <div class="bg-white shadow border p-4">
+    <div class="bg-white shadow border p-4" x-cloak x-show="showhate">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
                 <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="bg-white shadow border p-4">
+    <div class="bg-white shadow border p-4" x-cloak x-show="showhate">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
                 <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="bg-white shadow border p-4">
+    <div class="bg-white shadow border p-4" x-cloak x-show="showhate">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4 text-sm font-bold text-blue-800">
                 <div class="shadow w-12 h-12 bg-gray-50 bg-cover bg-center rounded-full overflow-hidden"
@@ -197,6 +197,11 @@
             @endif
         </div>
     @endforeach
+
+    <div class="pt-96">
+        <button type="button" class="text-gray-300"
+                @click="showhate = !showhate">Show hate</button>
+    </div>
 
     <form wire:submit.prevent="save">
         <div class="overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center"

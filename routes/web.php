@@ -21,6 +21,9 @@ Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])
 Route::get('/messages', [\App\Http\Controllers\ProfileController::class, 'messages'])
     ->middleware(['auth'])->name('messages');
 
+Route::get('/chat', [\App\Http\Controllers\ProfileController::class, 'chat'])
+    ->middleware(['auth'])->name('messages');
+
 Route::get('/video', [\App\Http\Controllers\ProfileController::class, 'video'])
     ->middleware(['auth'])->name('video');
 

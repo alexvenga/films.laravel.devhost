@@ -18,6 +18,11 @@ class ProfileController extends Controller
         return view('profile.messages');
     }
 
+    public function chat(Request $request)
+    {
+        return view('profile.chat');
+    }
+
     public function video(Request $request)
     {
         return view('profile.video');
