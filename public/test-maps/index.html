@@ -11,68 +11,91 @@
          * Yandex Suggest API
          */
 
-
         $(function () {
 
+            ymaps.ready(function () {
 
-            let timer = null,
-                timeout = 800;
+                let timer = null,
+                    timeout = 800;
+                let myMap = new ymaps.Map('map', {
+                    center: [55.751574, 37.573856],
+                    zoom: 7
+                });
 
-            $('#js-av-search-place-name').on('keyup', function () {
-                var value = $(this).val();
+                let suare1 = new ymaps.Placemark([57, 40], {
+                    hintContent: '[57, 40]'
+                }), suare2 = new ymaps.Placemark([54.5, 40], {
+                    hintContent: '[54.5, 40]'
+                }), suare3 = new ymaps.Placemark([54.5, 35], {
+                    hintContent: '[54.5, 35]'
+                }), suare4 = new ymaps.Placemark([57, 35], {
+                    hintContent: 'Собственный значок метки'
+                });
 
-                clearTimeout(timer);
+                myMap.geoObjects
+                    .add(suare1)
+                    .add(suare2)
+                    .add(suare3)
+                    .add(suare4);
 
-                timer = setTimeout(function () {
-                    var $suggest = $('#js-av-search-place-name')
-                        , $results = $('#js-av-search-place-name-results').removeClass('visible').empty()
-                        , $close = $('#js-av-search-place-name-close');
 
-                    // is empty value
-                    if ($.trim(value) === '') {
-                        return false;
-                    }
+                $('#js-av-search-place-name').on('keyup', function () {
+                    var value = $(this).val();
 
-                    value = 'Россия, Московская область, ' + value;
+                    clearTimeout(timer);
 
-                    var $ul = $('<ul/>').appendTo($results);
+                    timer = setTimeout(function () {
+                        var $suggest = $('#js-av-search-place-name')
+                            , $results = $('#js-av-search-place-name-results').removeClass('visible').empty()
+                            , $close = $('#js-av-search-place-name-close');
 
-                    ymaps.suggest(value)
-                        .then(function (items) {
-                            console.log('SUGGESTED');
-                            //$results.addClass('visible');
-                            //$close.addClass('visible');
+                        // is empty value
+                        if ($.trim(value) === '') {
+                            return false;
+                        }
 
-                            if (items.length > 0) {
-                                items.map(function (item) {
-                                    //console.log(item);
-                                    let text = item.displayName;
-                                    text = text.replace(', Московская область, Россия', '');
-                                    text = text.replace(', Россия', '');
-                                    $ul.append($('<li/>').text(text));
-                                });
+                        var $ul = $('<ul/>').appendTo($results);
 
-                                $('li', $results).on('click', function () {
+                        ymaps.suggest(value, [[,], [,]])
+                            .then(function (items) {
+                                console.log('SUGGESTED');
+                                //$results.addClass('visible');
+                                //$close.addClass('visible');
+
+                                if (items.length > 0) {
+                                    items.map(function (item) {
+                                        //console.log(item);
+                                        let text = item.displayName;
+                                        text = text.replace(', Московская область, Россия', '');
+                                        text = text.replace(', Россия', '');
+                                        $ul.append($('<li/>').text(text));
+                                    });
+
+                                    $('li', $results).on('click', function () {
+                                        $suggest.val($(this).text().trim());
+                                        $results.empty();
+                                    });
+                                } else {
+                                    $ul.append($('<li/>').addClass('message').text('No result found.'));
+                                }
+
+                                $close.on('click', function () {
                                     $suggest.val($(this).text().trim());
                                     $results.empty();
+                                    $results.removeClass('visible');
+                                    $close.removeClass('visible');
+                                    timer = null;
                                 });
-                            } else {
-                                $ul.append($('<li/>').addClass('message').text('No result found.'));
-                            }
-
-                            $close.on('click', function () {
-                                $suggest.val($(this).text().trim());
-                                $results.empty();
-                                $results.removeClass('visible');
-                                $close.removeClass('visible');
-                                timer = null;
+                            })
+                            .catch(function (err) {
+                                throw err;
                             });
-                        })
-                        .catch(function (err) {
-                            throw err;
-                        });
-                }, timeout);
+                    }, timeout);
+                });
+
+
             });
+
         });
     </script>
 
@@ -93,6 +116,8 @@
     </div>
     <button type="submit" id="js-av-search-place-name-button">НАйти</button>
 </form>
+
+<div id="map" style="width: 100%; height: 700px; margin-top: 40px;"></div>
 
 </body>
 </html>
