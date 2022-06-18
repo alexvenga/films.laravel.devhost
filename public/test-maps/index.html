@@ -66,6 +66,38 @@
 
                 //var suggestView = new ymaps.SuggestView('js-av-search-place-name', {results: 10, boundedBy: [[54.5, 35], [57, 40]]});
 
+                $('#js-av-search-place-name-form').on('submit', function (event) {
+                    event.preventDefault();
+
+                    let value = $('#js-av-search-place-name').val();
+
+                    if (!value) {
+                        alert('Не введена точка');
+                        return false;
+                    }
+
+                    ymaps.geocode(value, {
+                        boundedBy: [[54.5, 35], [57, 40]],
+                        // strictBounds: true,
+                        results: 1
+                    })
+                        .then(function (res) {
+                            let toPoint = res.geoObjects.get(0);
+                            console.log(toPoint);
+                            /*
+                            var firstGeoObject = res.geoObjects.get(0);
+                            if (firstGeoObject) {
+                                _this.$address2.removeClass('hide').html( firstGeoObject.properties.get('text') );
+                                _this.$path.addClass('hide')
+                                _this.createPath(firstGeoObject);
+                            } else {
+                                _this.clearMap();
+                            }
+                             */
+                        });
+
+
+                });
 
                 $('#js-av-search-place-name').on('keyup', function () {
                     var value = $(this).val();
@@ -86,6 +118,7 @@
 
                         ymaps.suggest(value, {
                             boundedBy: [[54.5, 35], [57, 40]],
+                            // strictBounds: true, не работает???
                             results: 10,
                         })
                             .then(function (items) {
@@ -143,7 +176,7 @@
 
 <h1>Test Vladislav Katkaev</h1>
 
-<form>
+<form id="js-av-search-place-name-form">
     <input type="text" name="place" id="js-av-search-place-name" autocomplete="off" style="width: 80%; padding: 4px;">
     <div id="js-av-search-place-name-results" style="margin-top: 10px;">
     </div>
