@@ -28,6 +28,8 @@
                     zoom: 8
                 });
 
+                let currentRoute = false;
+
                 let suare1 = new ymaps.Placemark([57, 40], {
                     hintContent: '[57, 40]'
                 }), suare2 = new ymaps.Placemark([54.5, 40], {
@@ -89,8 +91,11 @@
 
                 $('#js-av-search-place-name-form').on('submit', function (event) {
                     event.preventDefault();
-
                     searchResultText.text('');
+                    if (currentRoute !== false) {
+                        myMap.geoObjects.remove(currentRoute);
+                        myMap.setBounds([[54.5, 35], [57, 40]]);
+                    }
 
                     let value = $('#js-av-search-place-name').val();
 
@@ -177,7 +182,13 @@
                                                 }
                                             });
 
-                                            myMap.geoObjects.add(route);
+                                            currentRoute = route;
+
+                                            myMap.geoObjects.add(currentRoute);
+
+                                            let newBounds = ymaps.util.bounds.fromPoints([fromCoords, toCoords]);
+
+                                            myMap.setBounds(newBounds);
                                         });
 
                                 });
@@ -188,8 +199,12 @@
 
                 $('#js-av-coords-form').on('submit', function (event) {
                     event.preventDefault();
-
                     searchResultText.text('');
+                    if (currentRoute !== false) {
+                        myMap.geoObjects.remove(currentRoute);
+                        myMap.setBounds([[54.5, 35], [57, 40]]);
+                    }
+
 
                     let toLat = parseFloat($('#js-av-coords-lat').val());
                     let toLng = parseFloat($('#js-av-coords-lng').val());
@@ -267,7 +282,13 @@
                                         }
                                     });
 
-                                    myMap.geoObjects.add(route);
+                                    currentRoute = route;
+
+                                    myMap.geoObjects.add(currentRoute);
+
+                                    let newBounds = ymaps.util.bounds.fromPoints([fromCoords, [toLat, toLng]]);
+
+                                    myMap.setBounds(newBounds);
                                 });
 
                         });
@@ -352,10 +373,10 @@
 
 <h1>Test Vladislav Katkaev</h1>
 
-<form id="js-av-search-place-name-form">
+<form id="js-av-search-place-name-form" style="border: 2px solid #dddddd; border-radius: 10px; padding: 10px; background-color: #eeeeee;">
     <input type="text" name="place" id="js-av-search-place-name"
            autocomplete="off"
-           style="width: 80%; padding: 4px;"
+           style="width: 100%; padding: 4px 0;"
            value=""
     >
     <div id="js-av-search-place-name-results" style="margin-top: 10px;">
@@ -371,18 +392,18 @@
     </div>
 </form>
 
-<hr>
+<BR>
 
-<form id="js-av-coords-form">
+<form id="js-av-coords-form" style="border: 2px solid #dddddd; border-radius: 10px; padding: 10px; background-color: #eeeeee;">
     <input type="text" name="place" id="js-av-coords-lat"
            autocomplete="off"
-           style="width: 80%; padding: 4px;"
+           style="width: 40%; padding: 4px;"
            placeholder="Широта"
            value="55.14235"
     >
     <input type="text" name="place" id="js-av-coords-lng"
            autocomplete="off"
-           style="width: 80%; padding: 4px;"
+           style="width: 40%; padding: 4px;"
            placeholder="Долгота"
            value="37.454357"
     >
@@ -397,8 +418,9 @@
     </div>
 </form>
 
+<BR>
 
-<div id="js-av-search-result-text" style="margin-top: 10px; background-color: #eeeeee; padding: 10px;">
+<div id="js-av-search-result-text" style="border: 2px solid #dddddd; border-radius: 10px; padding: 10px; background-color: #eeeeee;">
 </div>
 
 <div id="map" style="width: 100%; height: 700px; margin-top: 40px;"></div>
