@@ -22,7 +22,7 @@
 
                 var suggestView = new ymaps.SuggestView('js-av-search-place-suggest-view', {
                     boundedBy: [[54.5, 35], [57, 40]],
-                    // strictBounds: true, не работает???
+                    strictBounds: true,// не работает???
                     results: 10,
                 });
 
@@ -94,21 +94,6 @@
                     });
                 ymaps.geoQuery(MKADPolygon).addToMap(myMap);
                 console.log('MKADPolygon added');
-                let NewMKADPolygon = new ymaps.Polygon(NewMKADCoords,
-                    {},
-                    {
-                        hasBalloon: false,
-                        hasHint: false,
-                        fill: false,
-                        // Цвет линии.
-                        strokeColor: "#1eff00",
-                        // Ширина линии.
-                        strokeWidth: 4,
-                        // Коэффициент прозрачности.
-                        strokeOpacity: 0.3
-                    });
-                ymaps.geoQuery(NewMKADPolygon).addToMap(myMap);
-                console.log('NewMKADPolygon added');
 
                 //var suggestView = new ymaps.SuggestView('js-av-search-place-name', {results: 10, boundedBy: [[54.5, 35], [57, 40]]});
 
@@ -424,6 +409,7 @@
        value=""
 >
 
+<BR>
 <BR>
 
 <form id="js-av-search-place-name-form" style="border: 2px solid #dddddd; border-radius: 10px; padding: 10px; background-color: #eeeeee;">
