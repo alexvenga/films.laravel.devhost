@@ -20,6 +20,13 @@
 
             ymaps.ready(function () {
 
+                var suggestView = new ymaps.SuggestView('js-av-search-place-suggest-view', {
+                    boundedBy: [[54.5, 35], [57, 40]],
+                    // strictBounds: true, не работает???
+                    results: 10,
+                });
+
+
                 let searchResultText = $('#js-av-search-result-text');
 
                 let timer = null,
@@ -83,10 +90,25 @@
                         // Ширина линии.
                         strokeWidth: 4,
                         // Коэффициент прозрачности.
-                        strokeOpacity: 0.5
+                        strokeOpacity: 0.3
                     });
                 ymaps.geoQuery(MKADPolygon).addToMap(myMap);
                 console.log('MKADPolygon added');
+                let NewMKADPolygon = new ymaps.Polygon(NewMKADCoords,
+                    {},
+                    {
+                        hasBalloon: false,
+                        hasHint: false,
+                        fill: false,
+                        // Цвет линии.
+                        strokeColor: "#1eff00",
+                        // Ширина линии.
+                        strokeWidth: 4,
+                        // Коэффициент прозрачности.
+                        strokeOpacity: 0.3
+                    });
+                ymaps.geoQuery(NewMKADPolygon).addToMap(myMap);
+                console.log('NewMKADPolygon added');
 
                 //var suggestView = new ymaps.SuggestView('js-av-search-place-name', {results: 10, boundedBy: [[54.5, 35], [57, 40]]});
 
@@ -395,6 +417,14 @@
 <body>
 
 <h1>Test Vladislav Katkaev</h1>
+
+<input type="text" name="place" id="js-av-search-place-suggest-view"
+       autocomplete="off"
+       style="width: 100%; padding: 4px 0;"
+       value=""
+>
+
+<BR>
 
 <form id="js-av-search-place-name-form" style="border: 2px solid #dddddd; border-radius: 10px; padding: 10px; background-color: #eeeeee;">
     <input type="text" name="place" id="js-av-search-place-name"
