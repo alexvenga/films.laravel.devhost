@@ -81,7 +81,7 @@
 
     </div>
 
-    {{--
+
     <div class="fixed inset-0 z-40" x-data="{
         allSeconds: 20,
         countdownSeconds: 20,
@@ -133,6 +133,6 @@
 
         </div>
     </div>
-    --}}
+
 
 </x-app-layout>
